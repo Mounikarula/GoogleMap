@@ -21,16 +21,16 @@
 		})
 	*/
 
-	addMarkers({lat:41.9686, lng:-79.9018});
-	addMarkers({lat:40.4406, lng:-79.9959});
-	addMarkers({lat:41.4993, lng:-81.6944});
-	addMarkers({lat:39.9612, lng:-82.9988});
+	addMarkers({coords:{lat:41.9686, lng:-79.9018}});
+	addMarkers({coords:{lat:40.4406, lng:-79.9959}});
+	addMarkers({coords:{lat:41.4993, lng:-81.6944}});
+	addMarkers({coords:{lat:39.9612, lng:-82.9988}});
 
 	// function to add multiple markers to the map
 
-	function addMarkers(coords) {
+	function addMarkers(props) {
 		var marker = new google.maps.Marker ({
-			position: coords,
+			position: props.coords,
 			map: map,
 			icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
 		});
