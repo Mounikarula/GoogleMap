@@ -34,7 +34,11 @@ iconImage:'https://developers.google.com/maps/documentation/javascript/examples/
 		var marker = new google.maps.Marker ({
 			position: props.coords,
 			map: map,
-			icon: props.iconImage
+			//icon: props.iconImage
 		});
+
+		if(props.iconImage){
+			marker.setIcon(props.iconImage);
+		}
 	}
 }
