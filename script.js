@@ -11,4 +11,12 @@
 			map:map,
 			icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
 		});
+
+		var infoWindow = new google.maps.InfoWindow({
+			content:'<h1>Beautiful Lake</h1>'
+		});
+
+		marker.addListener('click', function(){
+			infoWindow.open(map, marker);
+		})
 	}
