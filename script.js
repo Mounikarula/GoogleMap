@@ -22,18 +22,26 @@
 		})
 	*/
 
-	addMarker({
+
+	var markers =[
+	{
 		coords:{lat:41.9686, lng:-79.9018},
         iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
         content: '<h1>Beautiful lake<h1>'
-              });
-	addMarker({coords:{lat:40.4406, lng:-79.9959}});
-	addMarker({coords:{lat:41.4993, lng:-81.6944}});
-	addMarker({
+              },
+        {coords:{lat:40.4406, lng:-79.9959}},
+        {coords:{lat:41.4993, lng:-81.6944}},
+        {
 		coords:{lat:39.9612, lng:-82.9988},
         iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
         content: '<h1>Beautiful place<h1>'  
-              });
+              }
+             
+	];
+
+	for(var i=0; i<markers.length; i++){
+		addMarker(markers[i]);
+	}
 
 	// function to add multiple markers to the map
 
