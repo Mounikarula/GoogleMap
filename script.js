@@ -4,8 +4,12 @@
 			center: {lat:41.9686, lng:-79.9018}
 		}
 
-		var map = new 
-		google.maps.Map(document.getElementById('map'), options);
+		var map = new google.maps.Map(document.getElementById('map'), options);
+
+		google.maps.event.addListener(map, 'click', 
+			function(event){
+				addMarker({coords:event.latLng});
+		       });
 
 	/*	var marker = new google.maps.Marker({
 			position: {lat:42.4668, lng:-79.9495},
